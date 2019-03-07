@@ -104,79 +104,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({"node_modules/_parcel@1.11.0@parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"node_modules/_parcel@1.11.0@parcel/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/_parcel@1.11.0@parcel/src/builtins/bundle-url.js"}],"node_modules/bootstrap/dist/css/bootstrap.min.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\fonts\\glyphicons-halflings-regular.eot":[["glyphicons-halflings-regular.2fbbc53c.eot","node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.eot"],"node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.eot"],"./..\\fonts\\glyphicons-halflings-regular.woff2":[["glyphicons-halflings-regular.5205a59f.woff2","node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"],"node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"],"./..\\fonts\\glyphicons-halflings-regular.woff":[["glyphicons-halflings-regular.87950c9d.woff","node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff"],"node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff"],"./..\\fonts\\glyphicons-halflings-regular.ttf":[["glyphicons-halflings-regular.dc52369b.ttf","node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf"],"node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf"],"./..\\fonts\\glyphicons-halflings-regular.svg":[["glyphicons-halflings-regular.fa9c14a4.svg","node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.svg"],"node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.svg"],"_css_loader":"node_modules/_parcel@1.11.0@parcel/src/builtins/css-loader.js"}],"node_modules/_parcel@1.11.0@parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})({"src/js/index.js":[function(require,module,exports) {
+console.log('今天');
+},{}],"node_modules/_parcel@1.11.0@parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -345,4 +275,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["node_modules/_parcel@1.11.0@parcel/src/builtins/hmr-runtime.js"], null)
+},{}]},{},["node_modules/_parcel@1.11.0@parcel/src/builtins/hmr-runtime.js","src/js/index.js"], null)
+//# sourceMappingURL=/js.d818e0ef.map
