@@ -1,1 +1,0 @@
-{"version":3,"sources":["src/js/index.js"],"names":["console","log"],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AACAA,OAAO,CAACC,GAAR,CAAY,IAAZ","file":"js.d818e0ef.map","sourceRoot":"..","sourcesContent":["\r\nconsole.log('今天')"]}

@@ -4,14 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "./node_modules/.bin/parcel index.html news.html new_detail.html",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "execa": "^4.1.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
     "bootstrap": "^3.4.1",
-    "parcel": "^1.11.0",
     "sass": "^1.17.2"
   }
 }

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>首页</title>
+    <link rel="stylesheet" href="./src/scss/common.scss">
     <link rel="stylesheet" href="./src/scss/index.scss">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="./src/js/index.js"></script>
@@ -13,15 +14,15 @@
 <body>
     <header>
         <div class="top">
-            <div class="top_conter">
-                    <img src="./src/images/logo.png" alt="">
-                    <span>新龙教育</span>
-                    <span>河北新龙科技教育旗下品牌</span>
+            <div onclick="window.location.href='./index.html'" class="top_conter">
+                <img src="./src/images/logo.png" alt="">
+                <span>新龙教育</span>
+                <span>河北新龙科技教育旗下品牌</span>
             </div>
-            
+
             <ul class="head">
-                <li>首页</li>
-                <li>新闻中心</li>
+                <li><a onclick="window.location.href='./index.html'" href="#">首页</a></li>
+                <li><a onclick="window.location.href='./news.html'" href="#">新闻中心</a></li>
                 <li>教育体系</li>
                 <li>产学合作</li>
                 <li>线上学院</li>
@@ -30,19 +31,27 @@
                 <li>关于我们</li>
             </ul>
             <a href="#" class="header_a">
-            <div class="header_hide glyphicon glyphicon-menu-hamburger">
+                <div class="header_hide glyphicon glyphicon-menu-hamburger">
                     <ul class="head_hide">
-                            <li>首页</li>
-                            <li>新闻中心</li>
-                            <li>教育体系</li>
-                            <li>产学合作</li>
-                            <li>线上学院</li>
-                            <li>实训基地</li>
-                            <li>专家师资</li>
-                            <li>关于我们</li>
-                        </ul>
-            </div>
+                        <li>首页</li>
+                        <li>新闻中心</li>
+                        <li>教育体系</li>
+                        <li>产学合作</li>
+                        <li>线上学院</li>
+                        <li>实训基地</li>
+                        <li>专家师资</li>
+                        <li>关于我们</li>
+                    </ul>
+                </div>
             </a>
+        </div>
+        <div style="display: flex;margin: 0 auto;">
+            <div style="margin: 0 auto;padding: 10px 0;display: flex;">
+                <input placeholder="请输入关键字" id="search" type="text" name="$2" id="$2" value="新闻资讯"
+                    style="height: 40px;width: 469px;" />
+                <button onsubmit="return false" onclick="window.location.href=`./news.html?title=${search.value}`"
+                    type="submit" id="search_btn" value="" style="width: 80px;height: 40px;">搜索</button>
+            </div>
         </div>
     </header>
     <main>
@@ -51,11 +60,18 @@
         </div>
         <div class="introoduce container">
             <div class="row">
-                    <div class="one col-xs-6 col-sm-6 col-md-6 col-lg-3"><svg width="80" height="40"><use xlink:href="#新龙" /></svg>走进新龙</div>
-                    <div class="two col-xs-6 col-sm-6 col-md-6 col-lg-3"><svg width="80" height="40"><use xlink:href="#合作院校" /></svg>合作院校</div>
-                    <div class="three col-xs-6 col-sm-6 col-md-6 col-lg-3"><svg width="80" height="40"><use xlink:href="#产教融合" /></svg>产教融合</div>
-                    <div class="four col-xs-6 col-sm-6 col-md-6 col-lg-3"><svg width="80" height="40"><use xlink:href="#发展合作" /></svg>发展合作</div>
-                
+                <div onclick="window.location.href='./news.html'" class="one col-xs-6 col-sm-6 col-md-6 col-lg-3"><svg
+                        width="80" height="40">
+                        <use xlink:href="#新龙" /></svg>走进新龙</div>
+                <div onclick="window.location.href='./news.html'" class="two col-xs-6 col-sm-6 col-md-6 col-lg-3"><svg
+                        width="80" height="40">
+                        <use xlink:href="#合作院校" /></svg>合作院校</div>
+                <div onclick="window.location.href='./news.html'" class="three col-xs-6 col-sm-6 col-md-6 col-lg-3"><svg
+                        width="80" height="40">
+                        <use xlink:href="#产教融合" /></svg>产教融合</div>
+                <div onclick="window.location.href='./news.html'" class="four col-xs-6 col-sm-6 col-md-6 col-lg-3"><svg
+                        width="80" height="40">
+                        <use xlink:href="#发展合作" /></svg>发展合作</div>
             </div>
         </div>
         <div class="news container">
@@ -63,92 +79,99 @@
                 <div>新闻资讯</div>
             </div>
             <div class="news_content_top row">
-                <div class="news_left col-md-6 col-lg-6 col-sm-6 col-xs-12 clearfix">
+                <div onclick="window.location.href='./news.html'"
+                    class="news_left col-md-6 col-lg-6 col-sm-6 col-xs-12 clearfix">
                     <!-- <img src="" alt=""> -->
-                    <svg width="120" height="120"><use xlink:href="#对话" /></svg>
+                    <svg width="120" height="120">
+                        <use xlink:href="#对话" /></svg>
                     <div class="text">
                         <div class="text_top">
-                                <h3>新闻发布系统</h3>
-                                <h5>2019-03-06</h5>
+                            <h3>新闻中心</h3>
+                            <h5>2019-03-06</h5>
                         </div>
                         <div class="text_bottom">
-                                CSS3 渐变也支持透明度（transparent），可用于创建减弱变淡的效果。为了添加透明度，我们使用 rgba() 函数来定义颜色结点。rgba() 函数中的最后一个参数可以是从 0 到 1 的值，它定义了颜色的透明度：0 表示完全透明，1 表示完全不透明
+                            教育需求愈加强烈。与现实的教育事业发展相匹配，社会公众对于高质量发展特别是美好的教育生活需求迈向高位。由于新时代我国社会主要矛盾已经发生变化，就教育系统而言，人民日益增长的美好生活需求在教育领域有着更加强烈的反映和期待。家长的教育夙愿从“有学上”更多地转向“上好学”，广泛的教育利益相关者希望拥有更高的教育获得感、教育幸福感、教育满意度，整个社会公众的教育需求迈向质量时代。
+                        </div>
+                    </div>
+                </div>
+                <div onclick="window.location.href='./news.html'"
+                    class="news_right col-md-6 col-lg-6 col-sm-6 col-xs-12 clearfix">
+                    <svg width="120" height="120">
+                        <use xlink:href="#对话" /></svg>
+                    <div class="text">
+                        <div class="text_top">
+                            <h3>新闻发布系统</h3>
+                            <h5>2019-03-06</h5>
+                        </div>
+                        <div class="text_bottom">
+                            教育重心日益凸显。教育事业发展整体上迈入质量为本的新阶段，根本上依赖于国家教育战略工作重心以质量为核心的转移。为办好每一所学校，教好每一名学生，近年来《关于深化教育教学改革全面提高义务教育质量的意见》等教育政策重磅频出，更加关注教育发展中的学校建设质量、教师发展质量和学生成长质量，“育人为本”逐步被确立为考量教育质量的核心要件。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div onclick="window.location.href='./news.html'" class="news_content_bottom row">
+                <div class="news_left col-md-6 col-lg-6 col-sm-6 col-xs-12 clearfix">
+                    <!-- <img src="" alt=""> -->
+                    <svg width="120" height="120">
+                        <use xlink:href="#对话" /></svg>
+                    <div class="text">
+                        <div class="text_top">
+                            <h3>新闻发布系统</h3>
+                            <h5>2019-03-06</h5>
+                        </div>
+                        <div class="text_bottom">
+                            应对新的质量革命。我国在从人力资源大国向人力资源强国迈进过程中，教育为国家各项事业发展提供强有力的知识支撑与人力资源支持。特别是在新一轮产业革命背景下，面对日趋激烈的国际竞争趋势与关键核心技术的壁垒限制，更需要重视教育之“国之大计、党之大计”的地位与力量，持续推进教育领域的质量革命，更新质量观念，重塑质量文化。就教育质量的内涵而言，其意义也更加丰富和多元，传统上指向于数量、规模的“单数质量”概念被摒弃，代之以包容性较强的基于过程的“复数质量”概念，这是一种突破视域局限的复合立体式的“大质量观”。而在质量话语表达上同时抱持更为丰富的价值元素，譬如将公平发展与教育质量联袂考虑，质量与公平互释互构，致力于“让每个孩子都能享有公平而有质量的教育”。
                         </div>
                     </div>
                 </div>
                 <div class="news_right col-md-6 col-lg-6 col-sm-6 col-xs-12 clearfix">
-                        <svg width="120" height="120"><use xlink:href="#对话" /></svg>
-                        <div class="text">
-                            <div class="text_top">
-                                    <h3>新闻发布系统</h3>
-                                    <h5>2019-03-06</h5>
-                            </div>
-                            <div class="text_bottom">
-                                    CSS3 渐变也支持透明度（transparent），可用于创建减弱变淡的效果。为了添加透明度，我们使用 rgba() 函数来定义颜色结点。rgba() 函数中的最后一个参数可以是从 0 到 1 的值，它定义了颜色的透明度：0 表示完全透明，1 表示完全不透明
-                            </div>
+                    <svg width="120" height="120">
+                        <use xlink:href="#对话" /></svg>
+                    <div class="text">
+                        <div class="text_top">
+                            <h3>新闻发布系统</h3>
+                            <h5>2019-03-06</h5>
                         </div>
+                        <div class="text_bottom">
+                            教育高质量发展的新时代良好生态，需要匹配科学的评价系统，正如《深化新时代教育评价改革总体方案》（以下简称《总体方案》）指出，教育评价事关教育发展方向，有什么样的评价指挥棒，就有什么样的办学导向。为引导全社会树立科学的教育发展观，当下亟待开展教育高质量发展的评价指标体系研究，系统推进教育评价改革，在评价设计与操作上进行观念、过程与方向的把握，以评价改革助推教育高质量发展。
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="news_content_bottom row">
-                    <div class="news_left col-md-6 col-lg-6 col-sm-6 col-xs-12 clearfix">
-                        <!-- <img src="" alt=""> -->
-                        <svg width="120" height="120"><use xlink:href="#对话" /></svg>
-                        <div class="text">
-                            <div class="text_top">
-                                    <h3>新闻发布系统</h3>
-                                    <h5>2019-03-06</h5>
-                            </div>
-                            <div class="text_bottom">
-                                    CSS3 渐变也支持透明度（transparent），可用于创建减弱变淡的效果。为了添加透明度，我们使用 rgba() 函数来定义颜色结点。rgba() 函数中的最后一个参数可以是从 0 到 1 的值，它定义了颜色的透明度：0 表示完全透明，1 表示完全不透明
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news_right col-md-6 col-lg-6 col-sm-6 col-xs-12 clearfix">
-                            <svg width="120" height="120"><use xlink:href="#对话" /></svg>
-                            <div class="text">
-                                <div class="text_top">
-                                        <h3>新闻发布系统</h3>
-                                        <h5>2019-03-06</h5>
-                                </div>
-                                <div class="text_bottom">
-                                        CSS3 渐变也支持透明度（transparent），可用于创建减弱变淡的效果。为了添加透明度，我们使用 rgba() 函数来定义颜色结点。rgba() 函数中的最后一个参数可以是从 0 到 1 的值，它定义了颜色的透明度：0 表示完全透明，1 表示完全不透明
-                                </div>
-                            </div>
-                    </div>
-                </div>
         </div>
         <div class="link container">
             <div class="link_header">
                 友情链接
             </div>
             <div class="photo row">
-                    <img class="weishan col-md-2 col-lg-2 col-sm-2 col-xs-4" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ4AAAA2AQMAAAAMBLK7AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABJJREFUeNpjYBgFo2AUjAJ6AAAEbgABit0MdAAAAABJRU5ErkJggg==">
-                    <img class="supcon col-md-2 col-lg-2 col-sm-2 col-xs-4" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIgAAAAxAQMAAAA7sXOsAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABFJREFUeNpjYBgFo2AU0A8AAANyAAGw+IxhAAAAAElFTkSuQmCC">
-                    <img class="youzhipin col-md-2 col-lg-2 col-sm-2 col-xs-4" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAAAzAQMAAACAHJV6AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABFJREFUeNpjYBgFo2AU0BAAAANjAAE8iqkBAAAAAElFTkSuQmCC">
-                    <img class="acer col-md-2 col-lg-2 col-sm-2 col-xs-4" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAAzAQMAAAB8Cb6wAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABBJREFUeNpjYBgFo2AUEAsAAzAAAS5kMQUAAAAASUVORK5CYII=">
-                    <img class="wanke col-md-2 col-lg-2 col-sm-2 col-xs-4" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHEAAAA4AQMAAADw54U3AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABFJREFUeNpjYBgFo2AUDBQAAAOAAAEy04C4AAAAAElFTkSuQmCC">
-                    <img class="dell col-md-2 col-lg-2 col-sm-2 col-xs-4" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGwAAAA0AQMAAABVdU8UAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABBJREFUeNpjYBgFo2AUgAAAAwwAAYYaqw4AAAAASUVORK5CYII=">
-        
+                <div class="weishan" alt=""></div>
+                <div class="supcon" alt=""></div>
+                <div class="youzhipin" alt=""></div>
+                <div class="acer" alt=""></div>
+                <div class="wanke" alt=""></div>
+                <div class="dell" alt=""></div>
             </div>
-            
         </div>
     </main>
     <footer>
         <div class="footer_top">
             <div class="footer_top_left">
                 <!-- <svg width="200" height="200"><use xlink:href="#新龙" /></svg> -->
-            <img src="./src/images/新龙new.png" alt="">
+                <img src="./src/images/新龙new.png" alt="">
             </div>
             <div class="footer_top_middle">
                 <div>联系我们</div>
-                <div><svg width="20" height="20"><use xlink:href="#电话" /></svg>0311-88888888</div>
-                <div><svg width="20" height="20"><use xlink:href="#邮箱" /></svg>laoke012@126.com</div>
-                <div><svg width="20" height="20"><use xlink:href="#地址" /></svg>河北省广安大街时代方舟B座801</div>
+                <div><svg width="20" height="20">
+                        <use xlink:href="#电话" /></svg>0311-88888888</div>
+                <div><svg width="20" height="20">
+                        <use xlink:href="#邮箱" /></svg>xiaoliumail@foxmail.com</div>
+                <div><svg width="20" height="20">
+                        <use xlink:href="#地址" /></svg>河北省广安大街时代方舟B座801</div>
             </div>
             <div class="footer_top_right">
-                <div><img src="./src/images/微信公众号.png" alt=""></div>
-                
-                <div>关注新龙教育公众号</div>
+                <div><img src="./src/images/小程序码.jpg" alt=""></div>
+
+                <div>扫码使用小程序</div>
             </div>
         </div>
         <div class="footer_bottom">
@@ -158,7 +181,7 @@
             <div class="footer_bottom_right">
                 <img src="./src/images/QQ.png" alt="">
                 <img src="./src/images/Wechat.png" alt="">
-                <img src="./src/images/Weibo.png" alt="">
+                <a href="https://weibo.com/liulinboyi"><img src="./src/images/Weibo.png" alt=""></a>
             </div>
         </div>
     </footer>
